@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PressToInteract : MonoBehaviour
 {
+    public GameObject PressE;
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        PressE.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,20 +23,25 @@ public class PressToInteract : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            
+            collision.gameObject.GetComponent<PlayerInteract>().inArea = true;
+            PressE.SetActive(true);
         }
     }
 
     void OnTriggerStay(Collider collision)
     {
-
+        if (collision.gameObject.tag == "Player")
+        {
+            
+        }
     }
 
     void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-           
+           collision.gameObject.GetComponent<PlayerInteract>().inArea = false;
+           PressE.SetActive(false);
         }
     }
 }

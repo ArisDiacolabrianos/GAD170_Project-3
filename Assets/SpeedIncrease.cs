@@ -31,7 +31,7 @@ public class SpeedIncrease : MonoBehaviour
     void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Player") {
-            Debug.Log("hello");
+            //Debug.Log("hello");
             collision.gameObject.GetComponent<PlayerMovement>().speed = 12f;
         }
     }

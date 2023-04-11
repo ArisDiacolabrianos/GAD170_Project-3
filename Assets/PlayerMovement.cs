@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     // These variables (visible in the inspector) are for you to set up to match the right feel
     public float speed = 12f;
-    public float speedH = 2.0f;
+    public float speedH = 12.0f;
     public float speedV = 2.0f;
     public float yaw = 0.0f;
     public float pitch = 0.0f;

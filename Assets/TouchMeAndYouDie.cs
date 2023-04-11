@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TouchMeAndYouDie : MonoBehaviour
 {
@@ -20,7 +21,13 @@ public class TouchMeAndYouDie : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            SceneManager.LoadScene(0);
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 }
