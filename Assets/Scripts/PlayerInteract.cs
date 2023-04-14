@@ -14,14 +14,14 @@ public class PlayerInteract : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inArea = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //player interacting - press 'e'
-        if (inArea)
+        if (inArea == true)
         {           
             if (Input.GetKeyDown("e"))
             {

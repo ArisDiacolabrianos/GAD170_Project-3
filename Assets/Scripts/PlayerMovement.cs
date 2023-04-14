@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     // How high the player can jump
     public float jumpHeight = 2f;
 
+    //public Camera camera;
+
     private void Start()
     {
         // If the variable "controller" is empty...
@@ -63,6 +65,9 @@ public class PlayerMovement : MonoBehaviour
 
         // Rotate the player based off those mouse values we collected earlier
         transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+        
+        //Look up and down mechanic
+        //transform.eulerAngles = new Vector3(pitch, 0.0f, 0.0f);
  
         // This is stealing the data about the player being on the ground from the character controller
         isGrounded = controller.isGrounded;
