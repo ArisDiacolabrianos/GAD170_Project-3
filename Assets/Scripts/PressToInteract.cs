@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class PressToInteract : MonoBehaviour
 {
-    //public GameObject PressE1;
-    //public GameObject PressE2;
-    //public GameObject PressE3;
+    
     
 
     // Start is called before the first frame update
     void Start()
     {
-        //PressE1.SetActive(true);
-        //PressE2.SetActive(true);
-        //PressE3.SetActive(true);
+        
     }
 
     // Update is called once per frame
@@ -25,12 +21,9 @@ public class PressToInteract : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player") //&& collision.gameObject.tag == "Trigger")
+        if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerInteract>().inArea = true;
-            //PressE1.SetActive(true);
-            //PressE2.SetActive(true);
-            //PressE3.SetActive(true);
+            collision.gameObject.GetComponent<PlayerInteract>().inArea1 = true;
         }
     }
 
@@ -46,10 +39,7 @@ public class PressToInteract : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-           collision.gameObject.GetComponent<PlayerInteract>().inArea = false;
-            //PressE1.SetActive(false);
-            //PressE2.SetActive(false);
-            //PressE3.SetActive(false);
+           collision.gameObject.GetComponent<PlayerInteract>().inArea1 = false;
         }
     }
 }

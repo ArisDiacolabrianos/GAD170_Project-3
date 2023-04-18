@@ -7,26 +7,36 @@ using TMPro;
 public class PlayerInteract : MonoBehaviour
 {
     public TMP_Text textTime;
-    public bool inArea = false;
+    public bool inArea1 = false;
     public GameObject TrapDoor1;
+    public GameObject TrapDoor2;
+    public GameObject Door1;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        inArea = false;
+        inArea1 = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //player interacting - press 'e'
-        if (inArea == true)
+        if (inArea1 == true)
         {           
             if (Input.GetKeyDown("e"))
             {
                 TrapDoor1.SetActive(false);
+                TrapDoor2.SetActive(false);
+                Door1.SetActive(false);
             }
         }
     }
+
+    //Checkpoint 1 Position
+    //Vector3(-1.26999998,1.27999997,-4.59000015)
+
+    //checkpoint 2 position
+    //Vector3(-1.75,15.1999998,115.959999)
 }

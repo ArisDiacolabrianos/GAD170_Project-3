@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TouchMeAndYouDie : MonoBehaviour
+public class OutOfBounds : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,10 @@ public class TouchMeAndYouDie : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SceneManager.LoadScene(0);
+        }
+        else 
+        {
+            Destroy(collision.gameObject);
         }
     }
 
