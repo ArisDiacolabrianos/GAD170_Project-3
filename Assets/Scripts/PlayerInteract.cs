@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteract : MonoBehaviour
 {
     public TMP_Text textTime;
     public bool inArea1 = false;
+    public bool inArea2 = false;
     public GameObject TrapDoor1;
     public GameObject TrapDoor2;
     public GameObject Door1;
@@ -30,6 +32,14 @@ public class PlayerInteract : MonoBehaviour
                 TrapDoor1.SetActive(false);
                 TrapDoor2.SetActive(false);
                 Door1.SetActive(false);
+            }
+        }
+
+        if (inArea2 == true)
+        {
+            if (Input.GetKeyDown("e"))
+            {
+                SceneManager.LoadScene(0);
             }
         }
     }

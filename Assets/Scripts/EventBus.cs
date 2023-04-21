@@ -31,7 +31,7 @@ public class EventBus : MonoBehaviour
 
     public void SetCheckpoint(int newCheckpoint) {
         checkpointReached = newCheckpoint;
-        Debug.Log($"Checkpoint saved, player is at {newCheckpoint}");
+        Debug.Log($"Checkpoint saved, player is at {checkpointReached}");
     }
 
     public int WhatCheckpoint() {

@@ -25,6 +25,10 @@ public class PressToInteract : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerInteract>().inArea1 = true;
         }
+        if(collision.gameObject.tag == "Area2")
+        {
+            Debug.Log ("it worked");
+        }
     }
 
     void OnTriggerStay(Collider collision)
