@@ -21,13 +21,15 @@ public class PressToInteract : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && gameObject.tag == "Area1")
         {
             collision.gameObject.GetComponent<PlayerInteract>().inArea1 = true;
         }
-        if(collision.gameObject.tag == "Area2")
+
+        //The final checkpoint is tagged Area2. This will allow the 'e' key to restart the game from the player interact script
+        if(collision.gameObject.tag == "Player" && gameObject.tag == "Area2")
         {
-            Debug.Log ("it worked");
+            collision.gameObject.GetComponent<PlayerInteract>().inArea2 = true;
         }
     }
 
