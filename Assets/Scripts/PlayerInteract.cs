@@ -13,6 +13,7 @@ public class PlayerInteract : MonoBehaviour
     public GameObject TrapDoor1;
     public GameObject TrapDoor2;
     public GameObject Door1;
+    public AudioManager soundMaster;
     
 
     // Start is called before the first frame update
@@ -32,6 +33,7 @@ public class PlayerInteract : MonoBehaviour
                 TrapDoor1.SetActive(false);
                 TrapDoor2.SetActive(false);
                 Door1.SetActive(false);
+                soundMaster.GetComponent<AudioManager>().ESound();
             }
         }
 

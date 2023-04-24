@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioManager soundMaster;
     // INSTRUCTIONS
     // This script must be on an object that has a Character Controller component.
     // It will add this component if the object does not already have it.
@@ -61,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            soundMaster.GetComponent<AudioManager>().JumpSound();
         }
 
         // Rotate the player based off those mouse values we collected earlier
