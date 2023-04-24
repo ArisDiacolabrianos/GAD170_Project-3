@@ -28,23 +28,12 @@ public class AudioManager : MonoBehaviour
    {
         audioManager.clip = sfx3;
         audioManager.Play();
-        //int randomNum;
-        //randomNum = Random.Range(0,2);
-        //if (randomNum == 0){
-        //    Debug.Log (randomNum);
-        //    audioManager.clip = sfx3;
-        //    audioManager.Play();
-        //}
-        //if (randomNum == 1){
-        //    Debug.Log (randomNum);
-        //    audioManager.clip = sfx4;
-        //    audioManager.Play();
-        //}
-        //if (randomNum == 2){
-        //    Debug.Log (randomNum);
-        //    audioManager.clip = sfx5;
-        //    audioManager.Play();
-        //}  
+   }
+
+   public void VictorySound()
+   {
+     audioManager.clip = sfx4;
+     audioManager.Play();
    }
 
 }

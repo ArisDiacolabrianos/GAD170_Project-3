@@ -4,20 +4,7 @@ using UnityEngine;
 
 public class PressToInteract : MonoBehaviour
 {
-    
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioManager soundMaster;
 
     void OnTriggerEnter(Collider collision)
     {
@@ -30,6 +17,7 @@ public class PressToInteract : MonoBehaviour
         if(collision.gameObject.tag == "Player" && gameObject.tag == "Area2")
         {
             collision.gameObject.GetComponent<PlayerInteract>().inArea2 = true;
+            soundMaster.GetComponent<AudioManager>().VictorySound();
         }
     }
 

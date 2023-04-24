@@ -20,6 +20,7 @@ public class PlayerInteract : MonoBehaviour
     void Start()
     {
         inArea1 = false;
+        inArea2 = false;
     }
 
     // Update is called once per frame
@@ -46,9 +47,4 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    //Checkpoint 1 Position
-    //Vector3(-1.26999998,1.27999997,-4.59000015)
-
-    //checkpoint 2 position
-    //Vector3(-1.75,15.1999998,115.959999)
 }
